@@ -5,7 +5,7 @@ const { Op } = require("sequelize");
 
 router.get(
   "/",
-  expressAsyncHandler(async (req, res, next) => {
+  expressAsyncHandler(async (req, res, next) => { //Middleware - a function executing BEFORE the route is executed
     try {
       const allBusinesses = await db.Business.findAll({
         include: [
